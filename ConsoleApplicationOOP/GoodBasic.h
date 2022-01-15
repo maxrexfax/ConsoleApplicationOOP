@@ -8,16 +8,10 @@ private:
 
 public:
 
-	GoodBasic(int id) {
-		_itemId = id;
-	}
+	GoodBasic(int id);
 
-	int getItemId() {
-		return _itemId;
-	}
+	int getItemId();
 
-	void goodsPublicFunction() {
-		std::cout << "Message from parent class\n";
-	}
+	void goodsPublicFunction();
 };
 

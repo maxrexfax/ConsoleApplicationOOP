@@ -7,14 +7,14 @@
 #include "GoodBasic.h"
 using namespace std;
 
-class Freezer : public GoodBasic{
+class FreezerOld : public GoodBasic{
 private:
     int _itemPrice;
     string _itemName;
     string _itemDescription;
 
 public:
-    Freezer(int id, int price, string name, string description) : 
+    FreezerOld(int id, int price, string name, string description) : 
         GoodBasic{ id } {
         _itemPrice = price;
         _itemName = name;
@@ -46,7 +46,7 @@ public:
 int main()
 {
     std::cout << "Hello World!\n";
-    Freezer freezer01(1, 234, "Freezer Samsung", "Good thing...");
+    FreezerOld freezer01(1, 234, "Freezer Samsung", "Good thing...");
     freezer01.printHello();
     freezer01.printAllInfo();
    // freezer01.printString(freezer01.getName());

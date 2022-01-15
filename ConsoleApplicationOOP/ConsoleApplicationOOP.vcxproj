@@ -140,9 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplicationOOP.cpp" />
+    <ClCompile Include="Freezer.cpp" />
     <ClCompile Include="GoodBasic.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Freezer.h" />
     <ClInclude Include="GoodBasic.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
