@@ -12,6 +12,8 @@ public:
 
 	int getItemId();
 
+	void setItemId(int newId);
+
 	void goodsPublicFunction();
 };
 

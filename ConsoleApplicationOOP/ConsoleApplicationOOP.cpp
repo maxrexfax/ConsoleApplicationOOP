@@ -21,8 +21,28 @@ public:
         _itemDescription = description;
     }
 
+    int getPrice() {
+        return _itemPrice;
+    }
+
+    void setPrice(int newPrice) {
+        _itemPrice = newPrice;
+    }
+
     string getName() {
         return _itemName;
+    }
+
+    void setName(string name) {
+        _itemName = name;
+    }
+
+    string getDescription() {
+        return _itemDescription;
+    }
+
+    void setDescription(string descr) {
+        _itemDescription = descr;
     }
 
     void printHello() {
@@ -47,8 +67,13 @@ int main()
 {
     std::cout << "Hello World!\n";
     FreezerOld freezer01(1, 234, "Freezer Samsung", "Good thing...");
-    freezer01.printHello();
+    FreezerOld* pointerFreezer01 = &freezer01;
+
     freezer01.printAllInfo();
+    pointerFreezer01->printAllInfo();
+    //int array01[5] = {1,2,3,4,5};
+    //int* pointerToArray = array01;
+   // cout << pointerToArray[2];
    // freezer01.printString(freezer01.getName());
     //freezer01.goodsPublicFunction();
 }
