@@ -12,8 +12,17 @@ private:
     int _itemPrice;
     string _itemName;
     string _itemDescription;
+    
 
 public:
+    
+    FreezerOld() :
+        GoodBasic{ 0 } {
+        _itemPrice = 1;
+        _itemName = "noname";
+        _itemDescription = "nodescription";
+    }
+
     FreezerOld(int id, int price, string name, string description) : 
         GoodBasic{ id } {
         _itemPrice = price;
@@ -65,7 +74,9 @@ public:
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "Russian");
+
+    std::cout << "Hello Привет World!\n";
     FreezerOld freezer01(1, 234, "Freezer Samsung", "Good thing...");
     FreezerOld* pointerFreezer01 = &freezer01;
 
@@ -76,6 +87,9 @@ int main()
    // cout << pointerToArray[2];
    // freezer01.printString(freezer01.getName());
     //freezer01.goodsPublicFunction();
+    //Универсальный указатель
+    GoodBasic* universalPointer01 = new FreezerOld;
+    static_cast<FreezerOld*>(universalPointer01)->printAllInfo();
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
