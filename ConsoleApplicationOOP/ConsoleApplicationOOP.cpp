@@ -11,6 +11,8 @@ private:
     //int _itemPrice;
     //string _itemName;
     //string _itemDescription;
+    int _cameras;
+    int _weight;
     
 
 public:
@@ -19,9 +21,19 @@ public:
         GoodBasic{ 0, 1, "noname", "nodescription" } {
     }
 
-    FreezerOld(int id, int price, string name, string description) : 
+    FreezerOld(int id, int price, string name, string description, int cam, int weight) : 
         GoodBasic{ id, price, name, description } {
-    }    
+        _cameras = cam;
+        _weight = weight;
+    }   
+
+    int getCameras() {
+        return _cameras;
+    }
+
+    int getWeight() {
+        return _weight;
+    }
 
     void printHello() {
         std::cout << "Hello from class!\n";
