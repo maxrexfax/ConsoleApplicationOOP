@@ -143,11 +143,13 @@
     <ClCompile Include="Freezer.cpp" />
     <ClCompile Include="GoodBasic.cpp" />
     <ClCompile Include="Software.cpp" />
+    <ClCompile Include="WorkClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Freezer.h" />
     <ClInclude Include="GoodBasic.h" />
     <ClInclude Include="Software.h" />
+    <ClInclude Include="WorkClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
