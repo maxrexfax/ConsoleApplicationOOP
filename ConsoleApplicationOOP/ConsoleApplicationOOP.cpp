@@ -42,6 +42,14 @@ public:
 
 };
 
+class Software {
+private:
+    int _licenseYears;
+    int _computersQuantity;
+public:
+
+};
+
 int main()
 {
     setlocale(LC_ALL, "Russian");
