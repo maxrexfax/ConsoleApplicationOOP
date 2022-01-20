@@ -12,6 +12,7 @@ private:
 
 public:
 
+	GoodBasic();
 	GoodBasic(int id, int price, string name, string description);
 
 	int getItemId();
