@@ -142,10 +142,12 @@
     <ClCompile Include="ConsoleApplicationOOP.cpp" />
     <ClCompile Include="Freezer.cpp" />
     <ClCompile Include="GoodBasic.cpp" />
+    <ClCompile Include="Software.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Freezer.h" />
     <ClInclude Include="GoodBasic.h" />
+    <ClInclude Include="Software.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

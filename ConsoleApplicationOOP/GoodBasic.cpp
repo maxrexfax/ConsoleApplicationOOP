@@ -1,5 +1,12 @@
 #include "GoodBasic.h"
 
+GoodBasic::GoodBasic() {
+	_itemId = 0;
+	_itemPrice = 1;
+	_itemName = "name";
+	_itemDescription = "description";
+}
+
 GoodBasic::GoodBasic(int id, int price, string name, string description) {
 		_itemId = id;
 		_itemPrice = price;

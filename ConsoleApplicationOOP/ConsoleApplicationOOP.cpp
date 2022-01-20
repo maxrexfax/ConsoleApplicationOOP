@@ -6,6 +6,9 @@
 #include <string.h>
 #include "GoodBasic.h"
 #include "Freezer.h"
+#include "Software.h"
+
+
 
 int main()
 {
@@ -17,13 +20,21 @@ int main()
 
    // freezer01.printAllInfo();
     //pointerFreezer01->printAllInfo();
-    freezer01.toString();
+   // freezer01.toString();
+   // Software software01(1, 234, "OS Windows", "Some thing...", 2, 3);
+   // software01.toString();
     //int array01[5] = {1,2,3,4,5};
     //int* pointerToArray = array01;
    // cout << pointerToArray[2];
    // freezer01.printString(freezer01.getName());
     //freezer01.goodsPublicFunction();
     //Универсальный указатель
-    GoodBasic* universalPointer01 = new Freezer;
-    static_cast<Freezer*>(universalPointer01)->toString();
+
+    GoodBasic* universalPointer01 = new GoodBasic;
+    GoodBasic* universalPointer02 = new Freezer(1, 234, "Freezer Samsung", "Good thing...", 2, 34);
+    GoodBasic* universalPointer03 = new Software(1, 234, "Freezer Samsung", "Good thing...", 2, 34);
+
+    static_cast<GoodBasic*>(universalPointer01)->toString();
+    static_cast<Freezer*>(universalPointer02)->toString();
+    static_cast<Software*>(universalPointer03)->toString();
 }

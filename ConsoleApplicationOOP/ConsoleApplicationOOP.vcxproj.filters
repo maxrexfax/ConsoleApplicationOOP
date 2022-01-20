@@ -24,12 +24,18 @@
     <ClCompile Include="Freezer.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Software.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GoodBasic.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Freezer.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Software.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
