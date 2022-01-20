@@ -5,54 +5,23 @@
 #include <iostream>
 #include <string.h>
 #include "GoodBasic.h"
-using namespace std;
 
 class FreezerOld : public GoodBasic{
 private:
-    int _itemPrice;
-    string _itemName;
-    string _itemDescription;
+    //int _itemPrice;
+    //string _itemName;
+    //string _itemDescription;
     
 
 public:
     
     FreezerOld() :
-        GoodBasic{ 0 } {
-        _itemPrice = 1;
-        _itemName = "noname";
-        _itemDescription = "nodescription";
+        GoodBasic{ 0, 1, "noname", "nodescription" } {
     }
 
     FreezerOld(int id, int price, string name, string description) : 
-        GoodBasic{ id } {
-        _itemPrice = price;
-        _itemName = name;
-        _itemDescription = description;
-    }
-
-    int getPrice() {
-        return _itemPrice;
-    }
-
-    void setPrice(int newPrice) {
-        _itemPrice = newPrice;
-    }
-
-    string getName() {
-        return _itemName;
-    }
-
-    void setName(string name) {
-        _itemName = name;
-    }
-
-    string getDescription() {
-        return _itemDescription;
-    }
-
-    void setDescription(string descr) {
-        _itemDescription = descr;
-    }
+        GoodBasic{ id, price, name, description } {
+    }    
 
     void printHello() {
         std::cout << "Hello from class!\n";
@@ -63,25 +32,27 @@ public:
     }
 
     void printAllInfo() {
-        std::cout << " Item N" << GoodBasic::getItemId() << ":" << _itemName << "   Description:" << _itemDescription << "  Price:" << getItemPrice() << "\n";
+        std::cout << " Item N" << GoodBasic::getItemId() << ":" << getName() << "   Description:" << getDescription() << "  Price:" << getPrice() << "\n";
     }
-    //setters and getters
 
-    int getItemPrice() {
-        return _itemPrice;
+    void toString() {
+        cout << "toString inside FreezeOld:" << getItemId() << " " << getPrice() << " " << getName() << " " << getDescription() << "\n";
     }
+   
+
 };
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    std::cout << "Hello Привет World!\n";
+   //std::cout << "Hello Привет World!\n";
     FreezerOld freezer01(1, 234, "Freezer Samsung", "Good thing...");
     FreezerOld* pointerFreezer01 = &freezer01;
 
-    freezer01.printAllInfo();
-    pointerFreezer01->printAllInfo();
+   // freezer01.printAllInfo();
+    //pointerFreezer01->printAllInfo();
+    freezer01.toString();
     //int array01[5] = {1,2,3,4,5};
     //int* pointerToArray = array01;
    // cout << pointerToArray[2];
@@ -91,14 +62,3 @@ int main()
     GoodBasic* universalPointer01 = new FreezerOld;
     static_cast<FreezerOld*>(universalPointer01)->printAllInfo();
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
