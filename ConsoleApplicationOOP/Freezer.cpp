@@ -20,7 +20,13 @@ int Freezer::getWeight() {
 }
 
 void Freezer::setCameras(int cam) {
-    _cameras = cam;
+    if (cam > 0 && cam < 5) {
+        _cameras = cam;
+    }
+    else {
+        _cameras = 2;
+    }
+    
 }
 
 void Freezer::setWeight(int weight) {
