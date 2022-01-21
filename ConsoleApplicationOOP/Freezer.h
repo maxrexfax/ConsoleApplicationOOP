@@ -3,6 +3,7 @@
 class Freezer : public GoodBasic
 {
 private:
+
     int _cameras;
     int _weight;
 public:

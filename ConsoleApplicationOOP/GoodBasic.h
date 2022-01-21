@@ -28,5 +28,6 @@ public:
 	void setDescription(string descr);
 
 	void toString();
+	virtual void toDetailedSting() = 0;
 };
 

@@ -3,6 +3,7 @@
 class Software : public GoodBasic
 {
 private:
+
     int _licenseYears;
     int _computersQuantity;
 public:
@@ -15,5 +16,6 @@ public:
     int getComputersQuantity();
 
     void toString();
+    //void toDetailedSting();
 };
 
