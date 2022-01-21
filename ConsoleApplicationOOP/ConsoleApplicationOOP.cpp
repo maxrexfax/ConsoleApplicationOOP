@@ -8,6 +8,7 @@
 #include "Freezer.h"
 #include "Software.h"
 #include "WorkClass.h"
+#include "Chipsi.h"
 
 
 

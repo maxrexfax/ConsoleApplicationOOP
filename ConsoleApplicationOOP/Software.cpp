@@ -24,6 +24,6 @@ void Software::toString() {
     cout << "toString inside Software: id" << getItemId() << " Price:" << getPrice() << " Name:" << getName() << " Descr:" << getDescription() << " License years:" << getLicenseYears() << " Weight:" << getComputersQuantity() << "\n";
 }
 
-void Software::toDetailedSting() {
+/*void Software::toDetailedSting() {
     cout << "toDetailedSting\n";
-}
+}*/
