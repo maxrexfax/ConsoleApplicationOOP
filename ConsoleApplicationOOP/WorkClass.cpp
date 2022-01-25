@@ -6,9 +6,8 @@ void WorkClass::startWork() {
     static_cast<GoodBasic*>(universalPointer01)->toString();
     static_cast<Chipsi*>(universalPointer01)->toString();
 
-<<<<<<< Updated upstream
+
   //new data for pull request
-=======
 
     int aaaa01 = 100;
     string textToMove = "move to freezer branch";
@@ -19,5 +18,4 @@ void WorkClass::startWork() {
        Конечный дочерний класс Холодильник получает от двух родителей поля и методы, обязательные для
        предметов и электроприборов и реализует свои личные, которых не может быть у других классов
        предметов.*/
->>>>>>> Stashed changes
 }
