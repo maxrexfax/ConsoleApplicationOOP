@@ -1,14 +1,44 @@
 #include "Freezer.h"
 Freezer::Freezer() :
     GoodBasic{ 0, 1, "noname", "nodescription" } {
-    _cameras = 1;
-    _weight = 10;
+    fillProperties(1, 11, "color", "counry", 2);
 }
 
-Freezer::Freezer(int id, int price, string name, string description, int cam, int weight) :
+Freezer::Freezer(int id) :
+    GoodBasic{ id, 1, "noname", "nodescription" } {
+    fillProperties(1, 11, "color", "counry", 2);
+}
+
+Freezer::Freezer(int id, int price) :
+    GoodBasic{ id, price, "noname", "nodescription" } {
+    fillProperties(1, 11, "color", "counry", 2);
+}
+
+Freezer::Freezer(int id, int price, string name) :
+    GoodBasic{ id, price, name, "nodescription" } {
+    fillProperties(1, 11, "color", "counry", 2);
+}
+
+Freezer::Freezer(int id, int price, string name, 
+    string description, int cam) :
     GoodBasic{ id, price, name, description } {
-    _cameras = cam;
+    fillProperties(cam, 11, "color", "counry", 2);
+}
+
+Freezer::Freezer(int id, int price, string name, 
+    string description, int cam, int weight,
+    string color, string counry, int doors) :
+    GoodBasic{ id, price, name, description } {
+    fillProperties(cam, weight, color, counry, doors);    
+}
+
+void Freezer::fillProperties(int cameras, int weight, 
+    string color, string counry, int doors) {
+    _cameras = cameras;
     _weight = weight;
+    _color = color;
+    _counry = counry;
+    _doors = doors;
 }
 
 int Freezer::getCameras() {
@@ -42,5 +72,5 @@ void Freezer::printString(string dataToPrint) {
 }
 
 void Freezer::toString() {
-    cout << "toString inside FreezeOld: id" << getItemId() << " Price:" << getPrice() << " Name:" << getName() << " Descr:" << getDescription() << " Sections:" << getCameras() << " Weight:" << getWeight() << "\n";
+    cout << "toString inside FreezeOld: id:" << getItemId() << " Price:" << getPrice() << " Name:" << getName() << " Descr:" << getDescription() << " Sections:" << getCameras() << " Weight:" << getWeight() << "\n";
 }
